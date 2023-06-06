@@ -22,6 +22,18 @@
     </div>
 
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" onclick="location.href='{% url 'home' %}'" id="flow"> <h5> Go for prediction</h5> </button>
+    </form>
+
 </div>
 <script>
     // collect DOMs

@@ -43,7 +43,7 @@
         </div>
         <div class="divTableRow">
             <div class="divTableCell"><p>Your cough status: </p></div>
-            <div class="divTableCell"><p>healthy</p></div>
+            <div class="divTableCell"><p>{{cough}}</p></div>
             </div>
         </div>
         </div>
@@ -59,7 +59,25 @@
 {% endif %}
 
     </div>        
-</div>        
+</div> 
 
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" onclick="location.href='{% url 'record' %}'" id="flow"> <h5> record cough</h5> </button>
+</form>
+<br>
+<br>
+<br>
+<br>
 
 {%endblock%}

@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from start.views import home,record
+from cough.views import prehome
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home, name='home'),
-    path('record/',record, name='record'),
+    path('home/',home, name='home'),
+    path('',record, name='record'),
+    path('prehome/',prehome, name='prehome'),
     
 ]
